@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  trailingSlash: true,
+  basePath: "/golden-clipper",
+  assetPrefix: "/golden-clipper/",
 };
 
 export default nextConfig;
