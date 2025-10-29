@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "postbuild": "mkdir -p out && echo goldenclipper.shop > out/CNAME && touch out/.nojekyll",
+    "deploy": "npm run build && gh-pages -d out -b gh-pages --dotfiles -m \"deploy\""
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
@@ -22,8 +22,10 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "16.0.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.16",
     "typescript": "^5"
   }
+  
 }

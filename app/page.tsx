@@ -49,7 +49,7 @@ export default function LuxeGoldenClipper() {
   // --- Quick Inquiry state & helpers (prefilled WhatsApp text) ---
   const [qName, setQName] = useState("");
   const [qPhone, setQPhone] = useState("");
-  const [qService, setQService] = useState("Haircut ($35)");
+  const [qService, setQService] = useState("Haircut+Beard ($35)");
   const [qNotes, setQNotes] = useState("");
 
   // wa.me requires number without '+'
