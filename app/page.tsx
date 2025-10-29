@@ -21,7 +21,7 @@ const BRAND = {
 };
 
 const PRICES = [
-  { name: "Haircut", price: 35 },
+  { name: "Haircut+Beard", price: 35 },
   { name: "Fade & Taper Cuts", price: 20 },
   { name: "Beard Trim & Shaping", price: 20 },
   { name: "Hot Towel Shave", price: 20 },
@@ -341,7 +341,7 @@ Notes: ${qNotes}`;
                   value={qService}
                   onChange={(e) => setQService((e.target as HTMLSelectElement).value)}
                 >
-                  <option>Haircut ($35)</option>
+                  <option>Haircut+Beard ($35)</option>
                   <option>Fade & Taper ($20)</option>
                   <option>Beard Trim & Shaping ($20)</option>
                   <option>Hot Towel Shave ($20)</option>
