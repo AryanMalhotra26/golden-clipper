@@ -11,7 +11,7 @@ const BRAND = {
   name: "Golden Clipper Barbershop",
   address: "284 Springbank Dr, London, ON N6J 1E9",
   phoneE164: "+15196198792",
-  igUrl: "https://instagram.com/goldenclipper.to",
+  igUrl: "https://www.instagram.com/golden_clipper1/",
   mapUrl:
     "https://www.google.com/maps?q=284+Springbank+Dr,+London,+ON+N6J+1E9&z=15&output=embed",
 };
@@ -270,7 +270,8 @@ Notes: ${qNotes}`;
             <h2 className="text-3xl md:text-4xl font-bold">Find us</h2>
             <p className="mt-2 text-zinc-300">{BRAND.address}</p>
             <ul className="mt-4 text-zinc-300 space-y-2 text-sm">
-              <li>• Free parking outside the shop</li>
+              <li>• Free parking</li>
+              <li>• Same parking lot as Empire auto group (back of the shop)</li>
               <li>• Near main bus routes</li>
               <li>• Wheelchair accessible</li>
             </ul>
@@ -360,7 +361,7 @@ Notes: ${qNotes}`;
             <h4 className="font-semibold">Contact</h4>
             <ul className="mt-2 text-zinc-300 space-y-1">
               <li>Phone: <a href={tel} className="underline">(519) 619-8792</a></li>
-              <li>Instagram: <a href={BRAND.igUrl} className="underline" target="_blank">@goldenclipper.to</a></li>
+              <li>Instagram: <a href={BRAND.igUrl} className="underline" target="_blank">goldenclipper</a></li>
             </ul>
           </div>
         </div>
