@@ -213,9 +213,8 @@ Notes: ${qNotes}`;
         <h2 className="text-3xl md:text-4xl font-bold">Hours</h2>
         <div className="mt-6 grid sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-2xl">
           {[
-            { d: "Mon–Fri", t: "10:00am – 8:00pm*" },
-            { d: "Sat", t: "9:00am – 6:00pm*" },
-            { d: "Sun", t: "10:00am – 5:00pm*" },
+            { d: "Mon–Sat", t: "10:00am – 8:00pm*" },
+            { d: "Sun", t: "11:00am – 5:00pm*" },
           ].map((h) => (
             <div key={h.d} className={`p-5 rounded-xl bg-black/50 border border-zinc-800 ${Gold.ring}`}>
               <div className="flex items-center justify-between">
