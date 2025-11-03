@@ -15,7 +15,7 @@ const BRAND = {
   mapUrl:
     "https://www.google.com/maps?q=284+Springbank+Dr,+London,+ON+N6J+1E9&z=15&output=embed",
 };
-
+const HERO_IMG = "/hero.jpg";
 const PRICES = [
   { name: "Haircut+Beard", price: 35 },
   { name: "Fade & Taper Cuts", price: 20 },
@@ -138,43 +138,79 @@ Notes: ${qNotes}`;
       </nav>
 
       {/* HERO (no background image) */}
-      <header id="home" className="relative overflow-hidden">
-        <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full blur-3xl opacity-20 bg-gradient-to-br from-[#c8a24a] to-transparent" />
-        <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full blur-3xl opacity-20 bg-gradient-to-tr from-[#ae8d35] to-transparent" />
-        <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-extrabold leading-tight"
+
+    <header id="home" className="relative overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={HERO_IMG}
+          alt="Golden Clipper Barbershop"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        {/* Black tint */}
+        <div className="absolute inset-0 bg-black/70" />
+      </div>
+
+      {/* Content on top */}
+      <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-6xl font-extrabold leading-tight"
+        >
+          Look sharp. <span className={Gold.text}>Feel sharper.</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mt-4 text-lg text-zinc-200 max-w-xl"
+        >
+          Premium fades & classic cuts in the heart of Springbank. Walk-ins welcome.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-7 flex flex-wrap gap-3"
+        >
+          <a
+            href="#booking"
+            className={`inline-flex px-6 py-3 rounded-xl ${Gold.btn} ${Gold.ring} shadow font-semibold`}
           >
-            Look sharp. <span className={Gold.text}>Feel sharper.</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 text-lg text-zinc-300 max-w-xl"
+            Book Now
+          </a>
+          <a
+            href={tel}
+            className="inline-flex px-6 py-3 rounded-xl border border-zinc-700 bg-black/40 hover:bg-black/60"
           >
-            Premium fades & classic cuts in the heart of Springbank. Walk-ins welcome.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-7 flex flex-wrap gap-3"
+            Call
+          </a>
+          <a
+            href="#location"
+            className="inline-flex px-6 py-3 rounded-xl border border-zinc-700 bg-black/40 hover:bg-black/60"
           >
-            <a href="#booking" className={`inline-flex px-6 py-3 rounded-xl ${Gold.btn} ${Gold.ring} shadow font-semibold`}>Book Now</a>
-            <a href={tel} className="inline-flex px-6 py-3 rounded-xl border border-zinc-700 bg-black/40 hover:bg-black/60">Call</a>
-            <a href="#location" className="inline-flex px-6 py-3 rounded-xl border border-zinc-700 bg-black/40 hover:bg-black/60">Directions</a>
-          </motion.div>
-          <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-400">
-            <span className="px-3 py-1 rounded-full border border-zinc-700 bg-black/30">Local Favourite</span>
-            <span className="px-3 py-1 rounded-full border border-zinc-700 bg-black/30">Family Friendly</span>
-            <span className="px-3 py-1 rounded-full border border-zinc-700 bg-black/30">Same-Day Service</span>
-          </div>
+            Directions
+          </a>
+        </motion.div>
+
+        <div className="mt-6 flex flex-wrap gap-2 text-xs text-zinc-300">
+          <span className="px-3 py-1 rounded-full border border-zinc-700 bg-black/30">
+            Local Favourite
+          </span>
+          <span className="px-3 py-1 rounded-full border border-zinc-700 bg-black/30">
+            Family Friendly
+          </span>
+          <span className="px-3 py-1 rounded-full border border-zinc-700 bg-black/30">
+            Same-Day Service
+          </span>
         </div>
-      </header>
+      </div>
+    </header>
 
       {/* SERVICES */}
       <section id="services" className="max-w-6xl mx-auto px-4 py-16">
